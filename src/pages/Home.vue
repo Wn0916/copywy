@@ -1,5 +1,6 @@
 <template>
   <div id="bossRecommen">
+
     <div class="bs">
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -38,13 +39,20 @@
           </li>
         </ul>
       </div> <!--轮播图部分-->
-      <Navigator/>  <!--居家生活-->
+      <Navigator/>  <!--新人福利-->
       <Gift/>  <!--首页福利区-->
       <Split/>
-      <Manufacture/>  <!--新人福利-->
+      <Manufacture/>  <!--品牌直供-->
       <Split/>
       <Tops/>   <!--热销榜单-->
       <Split/>
+      <Recommend/>  <!--人气推荐-->
+      <Split/>
+      <Limited/>  <!--限时购-->
+      <Split/>
+      <NewArrival/>  <!--新品首发-->
+      <Split/>
+      <Classify/>   <!--列表-->
     </div>
   </div>
 </template>
@@ -58,14 +66,12 @@
   import Gift from './compoments/Gift/Gift'
   import Manufacture from './compoments/Manufacture/Manufacture'
   import Tops from './compoments/Tops/Tops'
-  import {mapState} from 'vuex'
+  import Recommend from './compoments/Recommend/Recommend'
+  import Limited from './compoments/Limited/Limited'
+  import NewArrival from './compoments/NewArrival/NewArrival'
+  import Classify from './compoments/Classify/Classify'
 
     export default {
-    computed:{
-      ...mapState({
-
-      })
-    },
       mounted () {
         let wrapper = document.querySelector('#bossRecommen')
         new BScroll(wrapper,{
@@ -88,7 +94,11 @@
         Navigator,
         Gift,
         Manufacture,
-        Tops
+        Tops,
+        Recommend,
+        Limited,
+        NewArrival,
+        Classify,
       },
     }
 </script>
@@ -112,6 +122,7 @@
           top 0
           transform: transformY(50%)
     .bs
+      width 750px
       position absolute
       top 0
       left 0

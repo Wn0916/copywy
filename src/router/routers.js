@@ -3,6 +3,8 @@
  */
 
 import Home from '../pages/Home'
+import categoryList from '../pages/categoryList/categoryList'
+
 export default [
   {
     path:'/home',
@@ -11,6 +13,14 @@ export default [
       showFooter:true,
       showHeader:true
     }
+  },
+  {
+    path: '/categoryList',
+    component: categoryList,
+    meta: {
+      showFooter: true
+    },
+
   },
   {
     path:'/',

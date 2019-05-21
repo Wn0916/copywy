@@ -5,21 +5,19 @@ import App from './App';
 import './mock/mock-server'
 import router from './router/index'
 import 'lib-flexible/flexible'
-// import store from './store'
+import store from './store'
 //
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
-// import HeaderSlot from './components/HeaderSlot/HeaderSlot';
 import Split from './components/Split/Split';
 
 Vue.component('Footer',Footer);
 Vue.component('Header',Header);
-// Vue.component('HeaderSlot',HeaderSlot);
 Vue.component('Split',Split);
 
 Vue.config.productionTip = false
 
-
+Vue.store = store
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -27,5 +25,5 @@ new Vue({
   components:{App},
   template:'<App/>',
   router,
-  // store
+   store
 })

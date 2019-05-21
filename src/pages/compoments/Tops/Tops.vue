@@ -58,7 +58,15 @@
   </section>
 </template>
 <script>
-  export default {}
+  import {mapState} from 'vuex'
+  export default {
+    computed: {
+      ...mapState(['categoryHotSellModule'])
+    },
+    mounted () {
+      this.$store.dispatch('getCategoryHotSellModule')
+    }
+  }
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../../common/stylus/mixins.styl"

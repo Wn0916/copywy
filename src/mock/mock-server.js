@@ -5,6 +5,5 @@ import Mock from 'mockjs';
 import category from './category.json';
 import homeData from './homeData.json';
 
-Mock.mock('/home', {code: 0, data: homeData});
-Mock.mock('/categorylist', {code: 0, data: category});
-
+Mock.mock('/mock/home', {code: 0, data: homeData});
+Mock.mock('/mock/categorylist', {code: 0, data: category});

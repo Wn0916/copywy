@@ -1,31 +1,17 @@
+/*
+vuex最核心的管理对象: store
+ */
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import {reqHomeData} from '../api'
+import state from './state'
+import mutations from './mutations'
+import actions from './actions'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    msg:[]
-
-  },
-  mutations: {
-  inc(state,msg ){
-    state.msg = msg
-  }
-  },
-  actions: {
-    async getHomeData ({commit}) {
-      const result = await reqHomeData();
-      if (result.code === 0) {
-        commit(inc,result.data.data)
-      }
-    }
-  },
-  getters: {},
-  modules: {
-
-  }
-
+  state,
+  mutations,
+  actions,
 })

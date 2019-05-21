@@ -5,7 +5,7 @@
        <i class="u-icon" :class="$route.path === '/home' ? 'u-icon-tabBar-index-active' : 'u-icon-tabBar-index'"></i>
        <span class="text">首页</span>
      </li>
-     <li class="item" :class="{active: $route.path.includes('/category')}" @click="$router.replace('/category')">
+     <li class="item" :class="{active: $route.path.includes('/category')}" @click="$router.replace('/categoryList')">
        <i class="u-icon" :class="$route.path.includes('/category') ? 'u-icon-tabBar-cate-active' : 'u-icon-tabBar-cate'"></i>
        <span class="text">分类</span>
      </li>
